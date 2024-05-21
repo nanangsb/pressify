@@ -11,6 +11,7 @@ export default defineConfig({
 		VitePWA({
 			registerType: 'autoUpdate',
 			includeAssets: ['favicon.ico', 'robots.txt', 'apple-touch-icon.png'],
+			devOptions: { enabled: true },
 			manifest: {
 				"short_name": "Pressify",
 				"name": "Pressify",
