@@ -58,7 +58,7 @@ export const SiteSelector = ({ onClose = undefined }: SiteSelectorProps) => {
 	const changeForm = (event: ChangeEvent<HTMLInputElement>) => {
 		// Thanks to https://stackoverflow.com/a/31941978.
 		// More beauty option https://stackoverflow.com/a/4791886
-		const parsedInput = event.target.value.match(/https:\/\/(?:www\.)?([a-z0-9\-]+)(?:\.[a-z\.]+[\/]?).*/i);
+		const parsedInput = event.target.value.match(/(?!\bwww\b)(\b([A-Z0-9]{2,60}+)\.[A-Z]{2,4}\b)/i);
 		setDetectionState(ESelectorState.Detecting);
 		setSearchValue((parsedInput !== null) ? parsedInput[0] : '');
 	};
